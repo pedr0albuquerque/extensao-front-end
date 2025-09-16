@@ -5,10 +5,18 @@ import {
  } from "@mui/material";
  import ButtonPrimary from "../components/ButtonPrimary";
 import { useState } from "react";
+import { cadastrarUsuario } from "../service/usuarios-endpoint";
 
 export default function TelaLogin(){
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+
+  const handleCadastrar = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const usuario = {email,senha};
+    console.log(usuario)
+    cadastrarUsuario(usuario);
+  }
 
   return(
     <>
@@ -20,7 +28,6 @@ export default function TelaLogin(){
           minHeight: "100vh",
           flexDirection: "column",
           width: "100%",
-          height: "100vh",
           background: "linear-gradient(135deg, #D9FBEA, #D9F1FB)",
           color: "white",
           fontSize: 24,
@@ -47,8 +54,33 @@ export default function TelaLogin(){
               }}
             >
               <TextField
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#107535ff", // quando clica (foco)
+                    },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "gray",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#107535ff", // label no foco
+                  },"& .MuiInput-underline:before": {
+                    borderBottomColor: "gray", // cor inicial
+                  },
+                  "& .MuiInput-underline:hover:before": {
+                    borderBottomColor: "#107535ff", // cor ao passar mouse
+                  },
+                  "& .MuiInput-underline:after": {
+                    borderBottomColor: "#107535ff", // cor quando focado
+                  },
+                }}
                 label="Email"
                 variant="standard"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                />
+              <TextField
                 sx={{
                   "& .MuiOutlinedInput-root": {
                     "&.Mui-focused fieldset": {
@@ -70,34 +102,11 @@ export default function TelaLogin(){
                     borderBottomColor: "#107535ff", // cor quando focado
                   },
                 }}
-              />
-              <TextField
                 label="Senha"
                 variant="standard"
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    "&.Mui-focused fieldset": {
-                      borderColor: "#107535ff", // quando clica (foco)
-                    },
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "gray",
-                  },
-                  "& .MuiInputLabel-root.Mui-focused": {
-                    color: "#107535ff", // label no foco
-                  },"& .MuiInput-underline:before": {
-                    borderBottomColor: "gray", // cor inicial
-                  },
-                  "& .MuiInput-underline:hover:before": {
-                    borderBottomColor: "#107535ff", // cor ao passar mouse
-                  },
-                  "& .MuiInput-underline:after": {
-                    borderBottomColor: "#107535ff", // cor quando focado
-                  },
-                }}
-              />
-              <ButtonPrimary
-                value="Entrar"
+                value={senha}
+                type="password"
+                onChange={(e) => setSenha(e.target.value)}
               />
               <Box 
                 className="d-flex gap-1"
@@ -107,15 +116,10 @@ export default function TelaLogin(){
                 >
                   Não tem cadastro?
                 </p>
-                <a
-                  style={{
-                    color: "#107535ff",
-                    fontWeight: "600",
-                    fontSize: "16px",
-                    textDecoration: "none",
-                    cursor: "pointer",
-                  }}
-                >Cadastre-se</a>  
+                <ButtonPrimary
+                  value="Cadastre-se"
+                  onClick={handleCadastrar}
+                />
               </Box>               
             </Box>
           </Box>
