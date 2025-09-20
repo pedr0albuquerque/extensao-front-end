@@ -135,7 +135,7 @@ export default function TelaLogin(){
                       textDecoration: "underline",
                     }
                   }}
-                  onClick={() => navigate("/home/cadastrar")}
+                  onClick={() => navigate("/cadastrar")}
                 >
                   Cadastre-se
                 </Typography>

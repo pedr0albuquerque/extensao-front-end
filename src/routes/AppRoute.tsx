@@ -5,8 +5,8 @@ import TelaCadastro from "../pages/TelaCadastro";
 export default function AppRoute(){
   return ( 
     <Routes>
-      <Route path="/home" element={<TelaLogin/>}/>
-      <Route path="/home/cadastrar" element={<TelaCadastro/>}/>
+      <Route path="/" element={<TelaLogin/>}/>
+      <Route path="/cadastrar" element={<TelaCadastro/>}/>
     </Routes>
   )
 }
