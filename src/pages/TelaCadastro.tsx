@@ -52,7 +52,7 @@ export default function TelaCadastro(){
           minHeight: "100vh",
           flexDirection: "column",
           width: "100%",
-          background: "linear-gradient(135deg, #D9FBEA, #D9F1FB)",
+          background: "#b8d4d8",
           color: "white",
           fontSize: 24,
         }}
@@ -61,7 +61,7 @@ export default function TelaCadastro(){
           <Box
             className="d-flex flex-column justify-center align-items-center bg-white p-5 rounded-2"
           >
-            <Typography variant="h5" sx={{ color: "#107535ff", marginBottom: "8px"}} className="fw-bold">
+            <Typography variant="h5" sx={{ color: "#0d7377", marginBottom: "8px"}} className="fw-bold">
               Cadastro
             </Typography>
             <Box
@@ -71,27 +71,27 @@ export default function TelaCadastro(){
                 gap: 2,
               }}
             >
-               <div>
+              <div>
                 <TextField
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "&.Mui-focused fieldset": {
-                        borderColor: "#107535ff", // quando clica (foco)
+                        borderColor: "#0d7377",
                       },
                     },
                     "& .MuiInputLabel-root": {
                       color: "gray",
                     },
                     "& .MuiInputLabel-root.Mui-focused": {
-                      color: "#107535ff", // label no foco
+                        color: "#0d7377",
                     },"& .MuiInput-underline:before": {
-                      borderBottomColor: "gray", // cor inicial
+                      borderBottomColor: "gray",
                     },
                     "& .MuiInput-underline:hover:before": {
-                      borderBottomColor: "#107535ff", // cor ao passar mouse
+                      borderBottomColor: "#0d7377", // cor ao passar mouse
                     },
                     "& .MuiInput-underline:after": {
-                      borderBottomColor: "#107535ff", // cor quando focado
+                      borderBottomColor: "#0d7377",
                     },
                   }}
                   label="Nome"
@@ -106,22 +106,22 @@ export default function TelaCadastro(){
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "&.Mui-focused fieldset": {
-                        borderColor: "#107535ff", // quando clica (foco)
+                        borderColor: "#0d7377",
                       },
                     },
                     "& .MuiInputLabel-root": {
                       color: "gray",
                     },
                     "& .MuiInputLabel-root.Mui-focused": {
-                      color: "#107535ff", // label no foco
+                      color: "#0d7377",
                     },"& .MuiInput-underline:before": {
-                      borderBottomColor: "gray", // cor inicial
+                      borderBottomColor: "gray",
                     },
                     "& .MuiInput-underline:hover:before": {
-                      borderBottomColor: "#107535ff", // cor ao passar mouse
+                      borderBottomColor: "#0d7377",
                     },
                     "& .MuiInput-underline:after": {
-                      borderBottomColor: "#107535ff", // cor quando focado
+                      borderBottomColor: "#0d7377",
                     },
                   }}
                   label="Email"
@@ -136,22 +136,22 @@ export default function TelaCadastro(){
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "&.Mui-focused fieldset": {
-                        borderColor: "#107535ff", // quando clica (foco)
+                        borderColor: "#0d7377",
                       },
                     },
                     "& .MuiInputLabel-root": {
                       color: "gray",
                     },
                     "& .MuiInputLabel-root.Mui-focused": {
-                      color: "#107535ff", // label no foco
+                      color: "#0d7377",
                     },"& .MuiInput-underline:before": {
-                      borderBottomColor: "gray", // cor inicial
+                      borderBottomColor: "gray",
                     },
                     "& .MuiInput-underline:hover:before": {
-                      borderBottomColor: "#107535ff", // cor ao passar mouse
+                      borderBottomColor: "#0d7377",
                     },
                     "& .MuiInput-underline:after": {
-                      borderBottomColor: "#107535ff", // cor quando focado
+                      borderBottomColor: "#0d7377",
                     },
                   }}
                   label="Senha"
@@ -184,11 +184,11 @@ export default function TelaCadastro(){
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "&.Mui-focused fieldset": {
-                        borderColor: "#107535ff",
+                        borderColor: "#0d7377",
                       },
                     },
                     "& .MuiInputLabel-root.Mui-focused": {
-                      color: "#107535ff",
+                      color: "#0d7377",
                     },
                   }}
                   label="Idade"
@@ -202,11 +202,11 @@ export default function TelaCadastro(){
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "&.Mui-focused fieldset": {
-                        borderColor: "#107535ff",
+                        borderColor: "#0d7377",
                       },
                     },
                     "& .MuiInputLabel-root.Mui-focused": {
-                      color: "#107535ff",
+                      color: "#0d7377",
                     },
                   }}
                   label="Ocupação"
@@ -220,11 +220,11 @@ export default function TelaCadastro(){
                   sx={{
                       "& .MuiOutlinedInput-root": {
                         "&.Mui-focused fieldset": {
-                          borderColor: "#107535ff",
+                          borderColor: "#0d7377",
                         },
                       },
                       "& .MuiInputLabel-root.Mui-focused": {
-                        color: "#107535ff",
+                        color: "#0d7377",
                       },
                     }}
                   label="Peso"
@@ -238,11 +238,11 @@ export default function TelaCadastro(){
                   sx={{
                       "& .MuiOutlinedInput-root": {
                         "&.Mui-focused fieldset": {
-                          borderColor: "#107535ff",
+                          borderColor: "#0d7377",
                         },
                       },
                       "& .MuiInputLabel-root.Mui-focused": {
-                        color: "#107535ff",
+                        color: "#0d7377",
                       },
                     }}
                   label="Altura"
@@ -270,7 +270,7 @@ export default function TelaCadastro(){
                 </p>
                 <Typography
                   sx={{
-                    color: "#107535ff",
+                    color: "#0d7377",
                     fontWeight: "bold",
                     cursor: "pointer",
                     "&:hover": {

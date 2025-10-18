@@ -1,22 +1,23 @@
 import { Button } from "@mui/material";
 
-interface ButtonPrimaryProps{
+interface ButtonSecondaryProps{
   value: string;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export default function ButtonPrimary({value, onClick}: ButtonPrimaryProps){
+export default function ButtonSecondary({value, onClick}: ButtonSecondaryProps){
 
   return(
     <Button 
       style={{
-        color: "#fff",
-        backgroundColor: "#0d7377",
-        fontWeight: "bold",
+        color: "#0d7377",
+        backgroundColor: "#fff",
+        fontWeight: "normal",
         fontSize: "16px",
         textDecoration: "none",
         cursor: "pointer",  
         textTransform: "none",
+        width: "100%",
       }}
       variant="contained"
       onClick={onClick}

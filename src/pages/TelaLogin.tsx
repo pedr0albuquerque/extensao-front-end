@@ -33,7 +33,7 @@ export default function TelaLogin(){
           minHeight: "100vh",
           flexDirection: "column",
           width: "100%",
-          background: "linear-gradient(135deg, #D9FBEA, #D9F1FB)",
+          background: "#b8d4d8",
           color: "white",
           fontSize: 24,
         }}
@@ -46,7 +46,7 @@ export default function TelaLogin(){
           >
             <Box 
               className="text-center"
-              style={{ color: "#107535ff"}}
+              style={{ color: "#0d7377"}}
             >
               <Typography variant="h4" className="fw-bold">Saude & Bem Estar</Typography>
               <Typography variant="body2">
@@ -64,22 +64,22 @@ export default function TelaLogin(){
                 sx={{
                   "& .MuiOutlinedInput-root": {
                     "&.Mui-focused fieldset": {
-                      borderColor: "#107535ff", // quando clica (foco)
+                      borderColor: "#0d7377", // quando clica (foco)
                     },
                   },
                   "& .MuiInputLabel-root": {
                     color: "gray",
                   },
                   "& .MuiInputLabel-root.Mui-focused": {
-                    color: "#107535ff", // label no foco
+                    color: "#0d7377", // label no foco
                   },"& .MuiInput-underline:before": {
                     borderBottomColor: "gray", // cor inicial
                   },
                   "& .MuiInput-underline:hover:before": {
-                    borderBottomColor: "#107535ff", // cor ao passar mouse
+                    borderBottomColor: "#0d7377", // cor ao passar mouse
                   },
                   "& .MuiInput-underline:after": {
-                    borderBottomColor: "#107535ff", // cor quando focado
+                    borderBottomColor: "#0d7377", // cor quando focado
                   },
                 }}
                 label="Email"
@@ -91,22 +91,22 @@ export default function TelaLogin(){
                 sx={{
                   "& .MuiOutlinedInput-root": {
                     "&.Mui-focused fieldset": {
-                      borderColor: "#107535ff", // quando clica (foco)
+                      borderColor: "#0d7377", // quando clica (foco)
                     },
                   },
                   "& .MuiInputLabel-root": {
                     color: "gray",
                   },
                   "& .MuiInputLabel-root.Mui-focused": {
-                    color: "#107535ff", // label no foco
+                    color: "#0d7377", // label no foco
                   },"& .MuiInput-underline:before": {
                     borderBottomColor: "gray", // cor inicial
                   },
                   "& .MuiInput-underline:hover:before": {
-                    borderBottomColor: "#107535ff", // cor ao passar mouse
+                    borderBottomColor: "#0d7377", // cor ao passar mouse
                   },
                   "& .MuiInput-underline:after": {
-                    borderBottomColor: "#107535ff", // cor quando focado
+                    borderBottomColor: "#0d7377", // cor quando focado
                   },
                 }}
                 label="Senha"
@@ -128,7 +128,7 @@ export default function TelaLogin(){
                 </p>
                 <Typography
                   sx={{
-                    color: "#107535ff",
+                  color: "#0d7377",
                     fontWeight: "bold",
                     cursor: "pointer",
                     "&:hover": {
