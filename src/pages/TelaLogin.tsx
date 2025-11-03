@@ -16,10 +16,15 @@ export default function TelaLogin(){
 
   const handleLogin = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+
     const usuario = {email,senha};
     const response = await loginUsuario(usuario);
-    if(!response){
+
+    if(response.responseStatus == 401){
       throw new Error("Nao foi possivel fazer login")
+    } else{
+      localStorage.setItem("usuarioId", response.data.id);
+      navigate("/dashboard");
     }
   }
 

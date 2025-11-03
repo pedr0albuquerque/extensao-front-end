@@ -1,8 +1,13 @@
 import { Card, Typography } from "@mui/material";
 import { ClipboardList } from "lucide-react";
-import ButtonSecondary from "../Button/ButtonSecondary";
+import ButtonSecondary from "../../Button/ButtonSecondary";
+
+import { useNavigate } from "react-router-dom";
 
 export default function NovaAvaliacao() {
+
+  const navigate = useNavigate();
+
   return (
     <Card className="d-flex flex-column justify-content-between" sx={{ flex: 1, p: 2, height: '180px', backgroundColor: "#0d7377" }}>
       <div className="d-flex justify-content-between">
@@ -31,7 +36,7 @@ export default function NovaAvaliacao() {
           </Typography>
         <ButtonSecondary
           value="Começar Avaliação"
-          onClick={() => {}}
+          onClick={() => navigate("/nova-avaliacao")}
         />
       </div>
     </Card>

@@ -40,6 +40,11 @@ export default function TelaCadastro(){
       altura,
     }
     const response = await cadastrarUsuario(usuario,pessoa);
+
+    
+    localStorage.setItem("usuarioId", response.data.id);
+    navigate("/dashboard");
+    
   }
 
   return(

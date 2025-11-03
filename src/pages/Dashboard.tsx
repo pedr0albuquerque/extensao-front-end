@@ -1,15 +1,31 @@
 import { Box, Card, Typography } from "@mui/material";
-import { Moon, Calendar, TrendingUp } from "lucide-react";
-import ButtonSecondary from "../components/Button/ButtonSecondary";
+import { Moon, } from "lucide-react";
 import UltimaAvaliacao from "../components/Cards/UltimaAvaliacao";
 import QualidadeMedia from "../components/Cards/QualidadeMedia";
 import SonoMedio from "../components/Cards/SonoMedio";
-import NovaAvaliacao from "../components/Cards/NovaAvaliacao";
+import NovaAvaliacao from "../components/Cards/NovaAvaliacao/NovaAvaliacao";
 import Historico from "../components/Cards/Historico";
-import DicaDia from "../components/Cards/DicaDIa";
+import DicaDia from "../components/Cards/DicaDia";
+import type { UsuarioDTO } from "../types/UsuarioDTO";
+import { useEffect, useState } from "react";
+import { getUsuario } from "../service/usuarios-endpoint";
 
 
 export default function Dashboard(){
+
+  const [usuario, setUsuario] = useState<UsuarioDTO>({} as UsuarioDTO);
+
+  useEffect(() => {
+    async () => {
+      const usuarioId = localStorage.getItem("usuarioId");
+      if (usuarioId) {
+        const response = await getUsuario(usuarioId);
+        console.log(response);
+        setUsuario(response);
+      }
+    };
+  }, []);
+
 
   return(
     <Box
@@ -52,7 +68,7 @@ export default function Dashboard(){
             color="#0d7377"
             className="fw-bold"
           >
-          Ola, Usuario
+            Ola
           </Typography>
           <Typography variant="body2" color="gray">
             Bem vindo ao seu painel de controle
